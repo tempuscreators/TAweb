@@ -269,9 +269,9 @@ const process = async (data) => {
           <div className="footer-bottom">
             <p>&copy; {new Date().getFullYear()} Tempus Aedificator. All rights reserved.</p>
             <div className="social-icons">
-              <a href="#" className="social-icon">In</a>
-              <a href="#" className="social-icon">Tw</a>
-              <a href="#" className="social-icon">Fb</a>
+              <a href="https://www.linkedin.com/company/tempus-aedificator" className="social-icon" target="_blank" rel="noopener noreferrer">In</a>
+              <a href="https://twitter.com/tempusaedificat" className="social-icon" target="_blank" rel="noopener noreferrer">Tw</a>
+              <a href="https://facebook.com/tempusaedificator" className="social-icon" target="_blank" rel="noopener noreferrer">Fb</a>
             </div>
           </div>
         </div>
