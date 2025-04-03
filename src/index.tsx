@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Add a link element for Google Fonts
+const googleFontsLink = document.createElement('link');
+googleFontsLink.rel = 'stylesheet';
+googleFontsLink.href = 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap';
+document.head.appendChild(googleFontsLink);
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
