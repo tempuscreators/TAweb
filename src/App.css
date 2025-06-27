@@ -467,6 +467,28 @@ section {
   transform: rotateX(45deg) rotateY(45deg);
 }
 
+.floating-cube-2 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: 15%;
+  top: 25%;
+  transform-style: preserve-3d;
+  animation: floatCube2 12s infinite ease-in-out;
+  transform: rotateX(30deg) rotateY(60deg);
+}
+
+.floating-cube-3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 10%;
+  bottom: 20%;
+  transform-style: preserve-3d;
+  animation: floatCube3 15s infinite ease-in-out;
+  transform: rotateX(60deg) rotateY(30deg);
+}
+
 .cube-face {
   position: absolute;
   width: 100%;
@@ -528,6 +550,24 @@ section {
   }
   50% {
     transform: rotateX(65deg) rotateY(65deg) translateY(-20px);
+  }
+}
+
+@keyframes floatCube2 {
+  0%, 100% {
+    transform: rotateX(30deg) rotateY(60deg) translateY(0) translateX(0);
+  }
+  50% {
+    transform: rotateX(60deg) rotateY(90deg) translateY(-30px) translateX(20px);
+  }
+}
+
+@keyframes floatCube3 {
+  0%, 100% {
+    transform: rotateX(60deg) rotateY(30deg) translateY(0) translateX(0);
+  }
+  50% {
+    transform: rotateX(90deg) rotateY(60deg) translateY(30px) translateX(-20px);
   }
 }
 

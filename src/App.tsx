@@ -63,10 +63,6 @@ function App() {
             </div>
           </div>
           <div className="hero-visual">
-            <div className="circle circle-1"></div>
-            <div className="circle circle-2"></div>
-            <div className="circle circle-3"></div>
-            
             <div className="floating-cube">
               <div className="cube-face face-front"></div>
               <div className="cube-face face-back"></div>
@@ -74,35 +70,56 @@ function App() {
               <div className="cube-face face-left"></div>
               <div className="cube-face face-top"></div>
               <div className="cube-face face-bottom"></div>
-              
-              {Array.from({ length: 15 }).map((_, i) => (
-                <div 
-                  key={i} 
-                  className="data-point" 
-                  style={{
-                    top: `${Math.random() * 100}%`,
-                    left: `${Math.random() * 100}%`,
-                    opacity: 0.5 + Math.random() * 0.5
-                  }}
-                ></div>
-              ))}
-              
-              {Array.from({ length: 8 }).map((_, i) => (
-                <div 
-                  key={i} 
-                  className="data-line" 
-                  style={{
-                    top: `${20 + Math.random() * 60}%`,
-                    left: `${Math.random() * 20}%`,
-                    width: `${30 + Math.random() * 50}%`,
-                    transform: `rotate(${Math.random() * 360}deg)`
-                  }}
-                ></div>
-              ))}
+            </div>
+            <div className="floating-cube-2">
+              <div className="cube-face face-front"></div>
+              <div className="cube-face face-back"></div>
+              <div className="cube-face face-right"></div>
+              <div className="cube-face face-left"></div>
+              <div className="cube-face face-top"></div>
+              <div className="cube-face face-bottom"></div>
+            </div>
+            <div className="floating-cube-3">
+              <div className="cube-face face-front"></div>
+              <div className="cube-face face-back"></div>
+              <div className="cube-face face-right"></div>
+              <div className="cube-face face-left"></div>
+              <div className="cube-face face-top"></div>
+              <div className="cube-face face-bottom"></div>
             </div>
             
-            <div className="code-snippet snippet-1">
-              {`function createAutomation() {
+            <div className="circle circle-1"></div>
+            <div className="circle circle-2"></div>
+            <div className="circle circle-3"></div>
+            
+            {Array.from({ length: 15 }).map((_, i) => (
+              <div 
+                key={i} 
+                className="data-point" 
+                style={{
+                  top: `${Math.random() * 100}%`,
+                  left: `${Math.random() * 100}%`,
+                  opacity: 0.5 + Math.random() * 0.5
+                }}
+              ></div>
+            ))}
+            
+            {Array.from({ length: 8 }).map((_, i) => (
+              <div 
+                key={i} 
+                className="data-line" 
+                style={{
+                  top: `${20 + Math.random() * 60}%`,
+                  left: `${Math.random() * 20}%`,
+                  width: `${30 + Math.random() * 50}%`,
+                  transform: `rotate(${Math.random() * 360}deg)`
+                }}
+              ></div>
+            ))}
+          </div>
+          
+          <div className="code-snippet snippet-1">
+            {`function createAutomation() {
   const system = new TempusCore();
   system.initialize({
     ai: true,
@@ -111,15 +128,14 @@ function App() {
   });
   return system;
 }`}
-            </div>
-            
-            <div className="code-snippet snippet-2">
-              {`// Intelligent workflow
+          </div>
+          
+          <div className="code-snippet snippet-2">
+            {`// Intelligent workflow
 const process = async (data) => {
   const results = await AI.analyze(data);
   return results.optimize();
 }`}
-            </div>
           </div>
         </div>
         <div className="scroll-indicator">
