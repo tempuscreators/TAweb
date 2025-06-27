@@ -1092,6 +1092,20 @@ section {
 /* Contact Section */
 .contact {
   z-index: 3;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  z-index: 0;
+  animation: pulse-glow 8s ease-in-out infinite alternate;
 }
 
 .contact::after {
@@ -1118,78 +1132,147 @@ section {
 
 .contact-content {
   flex: 1;
+  position: relative;
 }
 
 .contact-form {
-  background: var(--glass);
-  backdrop-filter: blur(12px);
-  padding: 3.5rem;
-  border-radius: var(--border-radius-lg);
-  border: 1px solid rgba(212, 175, 55, 0.15);
-  box-shadow: var(--shadow-lg);
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 4rem;
+  border-radius: var(--border-radius-xl);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 100px rgba(212, 175, 55, 0.1);
   overflow: hidden;
   position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.5),
+    0 0 120px rgba(212, 175, 55, 0.15);
 }
 
 .contact-form::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
-  opacity: 0.3;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.1) 45%,
+    rgba(212, 175, 55, 0.2) 50%,
+    rgba(212, 175, 55, 0.1) 55%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.contact-form:hover::before {
+  transform: translateX(100%);
 }
 
 .form-group {
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  perspective: 1000px;
+}
+
+.form-group::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-gold),
+    transparent
+  );
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.form-group:focus-within::after {
+  transform: scaleX(1);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 1.2rem 0;
+  padding: 1.2rem 1.5rem;
   font-size: 1rem;
   color: var(--text-light);
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--text-gray);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 12px;
   outline: none;
   font-family: 'Outfit', sans-serif;
-  transition: var(--transition);
-  border-radius: 0;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form-group label {
   position: absolute;
   top: 1rem;
-  left: 0;
+  left: 1.5rem;
   color: var(--text-gray);
   font-size: 1rem;
   pointer-events: none;
-  transition: var(--transition);
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, var(--primary-gold), var(--gold-highlight));
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0.7;
 }
 
 .form-group input:focus ~ label,
 .form-group input:valid ~ label,
 .form-group textarea:focus ~ label,
 .form-group textarea:valid ~ label {
-  top: -20px;
-  font-size: 0.8rem;
+  top: -1.5rem;
+  left: 0;
+  font-size: 0.85rem;
   color: var(--primary-gold);
+  opacity: 1;
+  transform: translateY(-50%);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  padding-left: 0.5rem;
-  border-bottom: 1px solid var(--primary-gold);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary-gold);
+  box-shadow: 
+    0 0 0 2px rgba(212, 175, 55, 0.1),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 .form-group textarea {
-  min-height: 120px;
+  min-height: 150px;
   resize: vertical;
+  line-height: 1.6;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
 }
 
 /* Footer */
