@@ -29,7 +29,7 @@ function App() {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           <div className="logo">
-            <img src="/new_TA_logo-removebg-preview (1).png" alt="Tempus Automaton" className="logo-image" />
+            <img src="/new_TA_logo-removebg-preview (1).png" alt="Tempus Automation" className="logo-image" />
           </div>
           <div className={`menu-toggle ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
             <span></span>
@@ -53,7 +53,7 @@ function App() {
         <div className="hero-container">
           <div className="hero-content">
             <div className="animated-text">
-              <h1>TEMPUS<br />AUTOMATON</h1>
+              <h1>TEMPUS<br />AUTOMATION</h1>
               <div className="gradient-line"></div>
             </div>
             <p>Creating <span className="highlight">tailored software solutions</span> that give business owners their time back</p>
@@ -102,7 +102,7 @@ function App() {
             </div>
             
             <div className="code-snippet snippet-1">
-              {`function createAutomaton() {
+              {`function createAutomation() {
   const system = new TempusCore();
   system.initialize({
     ai: true,
@@ -145,7 +145,7 @@ const process = async (data) => {
             },
             {
               icon: '⚙️',
-              title: 'Process Automaton',
+              title: 'Process Automation',
               description: 'Tailored software development that transforms your unique business processes into efficient, automated workflows.',
               color: 'gradient-2'
             },
@@ -181,7 +181,7 @@ const process = async (data) => {
           <div className="about-content">
             <span className="section-tag">Who We Are</span>
             <h2>Your Technology Partner</h2>
-            <p>At Tempus Automaton, we specialize in developing custom software and AI solutions that give business owners their most valuable asset back - time. Our expert team combines deep technical expertise with business acumen to create solutions that automate, innovate, and transform your operations.</p>
+            <p>At Tempus Automation, we specialize in developing custom software and AI solutions that give business owners their most valuable asset back - time. Our expert team combines deep technical expertise with business acumen to create solutions that automate, innovate, and transform your operations.</p>
             <div className="stats-container">
               <div className="stat-item">
                 <h3>95%</h3>
@@ -237,7 +237,7 @@ const process = async (data) => {
           <div className="footer-content">
             <div className="footer-logo">
               <div className="logo">
-                <img src="/new_TA_logo-removebg-preview (1).png" alt="Tempus Automaton" className="logo-image footer-logo-image" />
+                <img src="/new_TA_logo-removebg-preview (1).png" alt="Tempus Automation" className="logo-image footer-logo-image" />
               </div>
               <p>Crafting custom software solutions that create time for what matters</p>
             </div>
@@ -255,14 +255,14 @@ const process = async (data) => {
                 <h4>Services</h4>
                 <ul>
                   <li><a href="#services">AI Integration</a></li>
-                  <li><a href="#services">Process Automaton</a></li>
+                  <li><a href="#services">Process Automation</a></li>
                   <li><a href="#services">Analytics & Insights</a></li>
                 </ul>
               </div>
               <div className="footer-column">
                 <h4>Contact</h4>
                 <ul>
-                  <li>info@tempusautomaton.com</li>
+                  <li>info@tempusautomation.com</li>
                   <li>+1 (555) 123-4567</li>
                   <li>123 Tech Park, Innovation City</li>
                 </ul>
@@ -270,11 +270,11 @@ const process = async (data) => {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Tempus Automaton. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Tempus Automation. All rights reserved.</p>
             <div className="social-icons">
-              <a href="https://www.linkedin.com/company/tempus-automaton" className="social-icon" target="_blank" rel="noopener noreferrer">In</a>
+              <a href="https://www.linkedin.com/company/tempus-automation" className="social-icon" target="_blank" rel="noopener noreferrer">In</a>
               <a href="https://twitter.com/tempusaedificat" className="social-icon" target="_blank" rel="noopener noreferrer">Tw</a>
-              <a href="https://facebook.com/tempusautomaton" className="social-icon" target="_blank" rel="noopener noreferrer">Fb</a>
+              <a href="https://facebook.com/tempusautomation" className="social-icon" target="_blank" rel="noopener noreferrer">Fb</a>
             </div>
           </div>
         </div>
