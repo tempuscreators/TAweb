@@ -1515,6 +1515,9 @@ section {
   font-size: 0.8rem;
   font-weight: 600;
   transition: var(--transition);
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  padding: 0;
 }
 
 .social-icon:hover {

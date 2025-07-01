@@ -312,9 +312,9 @@ const process = async (data) => {
           <div className="footer-bottom">
             <p>&copy; 2024 Tempus Automation. All rights reserved.</p>
             <div className="social-icons">
-              <a href="#" className="social-icon">FB</a>
-              <a href="#" className="social-icon">TW</a>
-              <a href="#" className="social-icon">IN</a>
+              <button onClick={() => window.open('https://facebook.com', '_blank')} className="social-icon">FB</button>
+              <button onClick={() => window.open('https://twitter.com', '_blank')} className="social-icon">TW</button>
+              <button onClick={() => window.open('https://linkedin.com', '_blank')} className="social-icon">IN</button>
             </div>
           </div>
         </div>
