@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { db } from './firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,6 +21,18 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const testFirebase = async () => {
+    try {
+      const docRef = await addDoc(collection(db, "test"), {
+        message: "Firebase is connected!",
+        timestamp: new Date()
+      });
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
 
   return (
     <div className="App">
