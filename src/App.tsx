@@ -6,6 +6,7 @@ import { collection, addDoc } from 'firebase/firestore';
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [testStatus, setTestStatus] = useState<string>('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,8 +29,10 @@ function App() {
         message: "Firebase is connected!",
         timestamp: new Date()
       });
+      setTestStatus(`Successfully connected! Document ID: ${docRef.id}`);
       console.log("Document written with ID: ", docRef.id);
     } catch (e) {
+      setTestStatus(`Error connecting to Firebase: ${e}`);
       console.error("Error adding document: ", e);
     }
   };
@@ -309,6 +312,35 @@ const process = async (data) => {
           </div>
         </div>
       </footer>
+
+      <header className="App-header">
+        <button 
+          onClick={testFirebase}
+          style={{
+            padding: '10px 20px',
+            margin: '20px',
+            backgroundColor: '#d4af37',
+            color: '#0a0a0a',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            fontSize: '16px'
+          }}
+        >
+          Test Firebase Connection
+        </button>
+        {testStatus && (
+          <p style={{
+            color: testStatus.includes('Error') ? '#ff4444' : '#4CAF50',
+            margin: '10px',
+            padding: '10px',
+            borderRadius: '5px',
+            backgroundColor: 'rgba(0,0,0,0.1)'
+          }}>
+            {testStatus}
+          </p>
+        )}
+      </header>
     </div>
   );
 }
