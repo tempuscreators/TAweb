@@ -76,7 +76,19 @@ function App() {
             <p>Creating <span className="highlight">tailored software solutions</span> that give business owners their time back</p>
             <div className="hero-buttons">
               <button className="btn-primary">Explore Solutions</button>
-              <button className="btn-secondary">Watch Demo</button>
+              <button className="btn-secondary" onClick={testFirebase}>Test Connection</button>
+              {testStatus && (
+                <p style={{
+                  color: testStatus.includes('Error') ? '#ff4444' : '#4CAF50',
+                  margin: '10px 0',
+                  padding: '10px',
+                  borderRadius: '5px',
+                  backgroundColor: 'rgba(0,0,0,0.1)',
+                  fontSize: '0.9rem'
+                }}>
+                  {testStatus}
+                </p>
+              )}
             </div>
           </div>
           <div className="hero-visual">
@@ -312,35 +324,6 @@ const process = async (data) => {
           </div>
         </div>
       </footer>
-
-      <header className="App-header">
-        <button 
-          onClick={testFirebase}
-          style={{
-            padding: '10px 20px',
-            margin: '20px',
-            backgroundColor: '#d4af37',
-            color: '#0a0a0a',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-            fontSize: '16px'
-          }}
-        >
-          Test Firebase Connection
-        </button>
-        {testStatus && (
-          <p style={{
-            color: testStatus.includes('Error') ? '#ff4444' : '#4CAF50',
-            margin: '10px',
-            padding: '10px',
-            borderRadius: '5px',
-            backgroundColor: 'rgba(0,0,0,0.1)'
-          }}>
-            {testStatus}
-          </p>
-        )}
-      </header>
     </div>
   );
 }
