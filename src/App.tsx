@@ -91,6 +91,7 @@ function App() {
               )}
             </div>
           </div>
+          
           <div className="hero-visual">
             <div className="floating-cube">
               <div className="cube-face face-front"></div>
@@ -167,6 +168,7 @@ const process = async (data) => {
 }`}
           </div>
         </div>
+        
         <div className="scroll-indicator">
           <div className="mouse">
             <div className="wheel"></div>
@@ -214,7 +216,6 @@ const process = async (data) => {
 
       <section className="about" id="about">
         <div className="about-shape"></div>
-        
         <div className="about-container">
           <div className="about-visual">
             <div className="about-image">
@@ -245,54 +246,48 @@ const process = async (data) => {
         </div>
       </section>
 
-      <section id="contact" className="contact">
+      <section className="contact" id="contact">
+        <div className="contact-shape"></div>
         <div className="contact-container">
           <div className="contact-content">
-            <div className="contact-3d-design">
-              <div className="geometric-shape shape-1"></div>
-              <div className="geometric-shape shape-2"></div>
-              <div className="geometric-shape shape-3"></div>
-            </div>
             <span className="section-tag">Get In Touch</span>
-            <h2>Let's Build Something Great Together</h2>
-            <p>Ready to transform your business with custom software solutions? Contact us today and let's discuss how we can help you achieve your goals.</p>
+            <h2>Start Your Automation Journey</h2>
+            <p>Ready to transform your business with custom automation solutions? Let's discuss how we can help you save time and grow your business.</p>
+            <div className="contact-form">
+              <form>
+                <div className="form-group">
+                  <input type="text" id="name" required />
+                  <label htmlFor="name">Your Name</label>
+                </div>
+                <div className="form-group">
+                  <input type="email" id="email" required />
+                  <label htmlFor="email">Your Email</label>
+                </div>
+                <div className="form-group">
+                  <textarea id="message" required></textarea>
+                  <label htmlFor="message">Your Message</label>
+                </div>
+                <button type="submit" className="btn-primary">Send Message</button>
+              </form>
+            </div>
           </div>
-          <form className="contact-form">
-            <div className="form-group">
-              <input type="text" id="name" required />
-              <label htmlFor="name">Full Name</label>
-            </div>
-            <div className="form-group">
-              <input type="email" id="email" required />
-              <label htmlFor="email">Email Address</label>
-            </div>
-            <div className="form-group">
-              <textarea id="message" required></textarea>
-              <label htmlFor="message">Your Message</label>
-            </div>
-            <button type="submit" className="btn-primary">Send Message</button>
-          </form>
         </div>
       </section>
 
       <footer className="footer">
         <div className="footer-wave"></div>
-        
         <div className="footer-container">
           <div className="footer-content">
             <div className="footer-logo">
-              <div className="logo">
-                <img src="/new_TA_logo-removebg-preview (1).png" alt="Tempus Automation" className="logo-image footer-logo-image" />
-              </div>
-              <p>Crafting custom software solutions that create time for what matters</p>
+              <img src="/new_TA_logo-removebg-preview (1).png" alt="Tempus Automation" className="footer-logo-image" />
+              <p>Empowering businesses through intelligent automation solutions.</p>
             </div>
             <div className="footer-links">
               <div className="footer-column">
-                <h4>Navigation</h4>
+                <h4>Company</h4>
                 <ul>
-                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about">About Us</a></li>
                   <li><a href="#services">Services</a></li>
-                  <li><a href="#about">About</a></li>
                   <li><a href="#contact">Contact</a></li>
                 </ul>
               </div>
@@ -305,21 +300,21 @@ const process = async (data) => {
                 </ul>
               </div>
               <div className="footer-column">
-                <h4>Contact</h4>
+                <h4>Connect</h4>
                 <ul>
-                  <li>info@tempusautomation.com</li>
-                  <li>+1 (555) 123-4567</li>
-                  <li>123 Tech Park, Innovation City</li>
+                  <li><a href="#contact">Get Started</a></li>
+                  <li><a href="#contact">Support</a></li>
+                  <li><a href="#contact">FAQ</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Tempus Automation. All rights reserved.</p>
+            <p>&copy; 2024 Tempus Automation. All rights reserved.</p>
             <div className="social-icons">
-              <a href="https://www.linkedin.com/company/tempus-automation" className="social-icon" target="_blank" rel="noopener noreferrer">In</a>
-              <a href="https://twitter.com/tempusaedificat" className="social-icon" target="_blank" rel="noopener noreferrer">Tw</a>
-              <a href="https://facebook.com/tempusautomation" className="social-icon" target="_blank" rel="noopener noreferrer">Fb</a>
+              <a href="#" className="social-icon">FB</a>
+              <a href="#" className="social-icon">TW</a>
+              <a href="#" className="social-icon">IN</a>
             </div>
           </div>
         </div>
